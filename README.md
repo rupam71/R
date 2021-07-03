@@ -1,71 +1,98 @@
-# Getting Started with Create React App
+# Complete MERN Boilerplate With React Redux.     
+Getting Start With Create-React-App Redux React-Redux React-Router-Dom Node Express MongoDB All Together
+This is a complete template for React developers.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Setup Node React Environment is not easy and takes so much time. Especially when Redux adds, setting Action Reducer Redux-Thunk is a hard task. Also, a little mistake can waste lots of time. That’s why I build it, to help other React Developers.  
+
+## Installation
+
+At first, select a suitable position in your Hard-Disk to download this. You should use a Terminal or PowerShell or any command-line prompt. Then write this to your command prompt.
+
+Download This Boilerplate 
+### `git clone https://github.com/rupam71/R.git`
+Now it saves in a Directory called R. Now go there 
+### `cd R`
+Now you have to install all npm module 
+### `npm install`
+After finish this, you have to go Client Directory. All kinds of front-end code we write here 
+### `cd client`
+Again you have to install all npm module which requires for the front-end
+### `npm install`
+
 
 ## Available Scripts
 
-In the project directory, you can run:
+To start the Backend development server, From the project directory, you can run:
+### `npm run dev`
 
-### `npm start`
+Runs the Backend server in 
+[http://localhost:5000](http://localhost:5000) Open to view it in the browser.
 
+There are also other scripts available, for Heroku. You can simply see this in the `package.json` file
+
+Now to run the Front-End Development server, at first, you have to go `/client` directory
+
+```bash
+cd client 
+npm start
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Available NPM Modules
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Front-End
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In `client/public/index.js` Bootstrap Semantic Ui and Font Awsome CDN already there. You can modify this as your wish.
+ 
+In `client/src/app.js` I already put `React Router`.
 
-### `npm run eject`
+In `client/src/action/index.js`, there will be your all `Redux Action`. I put 3 sample Actions there. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In the `client/src/reducer` directory, you will write your reducer code. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In the `client/src/component` directory, you will write your class and functional component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In `client/src/component/Home` and `client/src/component/Navbar`, I write 2 demo class component with with `Redux` and `React-Redux` . You will easily understand when you see it. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+And Lastly, the `client/src/setUpProxy` file will connect your development Front-End Server with the development Back-End Server.
 
-## Learn More
+### Back-End
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In `config/dev.env` file, we will write all our secret key. Like bycrypt or hash key. Example,
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+config/dev.env
+### `secretKey=123456`
+We will use this key, in other file as 
+### `hashCode(process.env.secretKey)`
 
-### Code Splitting
+### BEWARE
+In the `.gitignore` file you must add the config folder. just add this to second-line `/config`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Or all your secret keys will publish.
 
-### Analyzing the Bundle Size
+# Remove Existing Git Folder
+It will be better to delete the existing git folder and install it again. Use
+```bash
+rm .git
+rmdir .git
+git init
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You are fine now.
 
-### Making a Progressive Web App
+Happy Coding...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+# Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Thank you for using and reading this.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
